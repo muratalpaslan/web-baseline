@@ -23,8 +23,8 @@ Decisions about semicolons, indentation, or folder structure consume valuable ti
 
 Web Baseline provides a rigid foundation to:
 
-1. **Enforce Consistency:** Formatting and linting rules are automatically applied.
-2. **Reduce Friction:** New developers onboard without editor setup.
+1. **Enforce Consistency:** Formatting and linting rules are automatically applied.  
+2. **Reduce Friction:** New developers onboard without editor setup.  
 3. **Prevent Bad Commits:** Git hooks block unformatted or erroneous code.
 
 ---
@@ -33,25 +33,89 @@ Web Baseline provides a rigid foundation to:
 
 Running the setup script provides:
 
-- **Structured Architecture:** Creates a scalable folder layout (`src/modules`, `services`, `utils`, `public`).
-- **Code Quality:** Installs & configures **ESLint** and **Prettier** with industry-standard rules.
-- **Git Hooks:** Sets up **Husky** + **lint-staged** for automatic code validation.
-- **Editor Configuration:** Generates `.vscode/settings.json` to enforce “Format on Save”.
+- **Structured Architecture:** Creates a scalable folder layout (`src/modules`, `src/services`, `src/utils`, `public`).  
+- **Code Quality:** Installs & configures **ESLint** and **Prettier** with industry-standard rules.  
+- **Git Hooks:** Sets up **Husky** + **lint-staged** for automatic code validation.  
+- **Editor Configuration:** Generates `.vscode/settings.json` to enforce “Format on Save”.  
 - **Modern Stack:** Enforces **PNPM**, ES Modules (`type: "module"`), and opinionated defaults.
 
 ---
 
 ## Prerequisites
 
-- **Node.js:** 18+
-- **PNPM:** Required
-- **Bash:** macOS, Linux, or WSL
+- **Node.js:** 18+  
+- **PNPM:** Required  
+- **Bash:** macOS, Linux, or WSL  
 
 ---
 
-## Quick Start (Per Project)
+## Quick Start
 
 Download the script into your project:
 
 ```bash
-curl -O [https://raw.githubusercontent.com/muratalpaslan/web-baseline/main/web-baseline.sh](https://raw.githubusercontent.com/muratalpaslan/web-baseline/main/web-baseline.sh)
+curl -O https://raw.githubusercontent.com/muratalpaslan/web-baseline/main/web-baseline.sh
+```
+
+Make it executable and run:
+
+```bash
+chmod +x web-baseline.sh  
+./web-baseline.sh
+```
+
+---
+
+## Generated Project Structure
+
+```text
+.
+├── .husky/
+├── .vscode/
+│   └── settings.json
+├── public/
+│   ├── assets/
+│   ├── icons/
+│   ├── images/
+│   ├── js/
+│   └── styles/
+├── src/
+│   ├── modules/
+│   ├── services/
+│   └── utils/
+├── .editorconfig
+├── .eslintrc.cjs
+├── .lintstagedrc.json
+├── .prettierrc.json
+├── package.json
+└── pnpm-lock.yaml
+```
+
+---
+
+## Configuration Standards
+
+### Prettier Rules
+
+- Semicolons: Yes  
+- Single Quotes: Yes  
+- Tab Width: 2  
+- Print Width: 80  
+- Trailing Comma: ES5  
+
+### ESLint Strategy
+
+- Extends: `eslint:recommended`  
+- Extends: `plugin:prettier/recommended`  
+- Environments: Browser, Node, ES2021  
+
+### VS Code Settings
+
+- `editor.formatOnSave`: Enabled  
+- `editor.defaultFormatter`: Prettier  
+
+---
+
+## License
+
+Distributed under the MIT License. See the LICENSE file for details.
