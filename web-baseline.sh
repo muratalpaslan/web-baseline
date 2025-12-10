@@ -2,7 +2,7 @@
 set -e
 
 echo ""
-echo "'proje-start' çalışıyor..."
+echo "'web-baseline' çalışıyor..."
 echo ""
 
 # -----------------------------------------------------
@@ -213,5 +213,5 @@ EOF
 # BİTTİ
 # -----------------------------------------------------
 echo ""
-echo "proje-start tamamlandı."
+echo "web-baseline tamamlandı."
 echo ""
