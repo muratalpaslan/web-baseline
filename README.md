@@ -1,81 +1,57 @@
 # Web Baseline
 
-Automated setup script for a clean, consistent, and scalable web development environment. Creates a standardized folder structure and configures ESLint, Prettier, and Husky out of the box.
+Automated setup script for a clean, consistent, and scalable web development environment.
+Creates a standardized folder structure and configures ESLint, Prettier, and Husky out of the box.
 
 **Stop bikeshedding. Start building.**
 
-Web Baseline is an opinionated, production-ready setup script designed to instantly bootstrap a standardized Node.js/Web project environment.
+Web Baseline is an opinionated, production-ready bootstrapper that instantly standardizes your **Web/Node.js** project architecture.
 
-It eliminates the repetitive manual configuration of ESLint, Prettier, Husky, and VS Code settings, enforcing a strict yet clean architecture from the very first commit.
+It eliminates repetitive setup work by configuring ESLint, Prettier, Husky, and VS Code settings—enforcing a clean project structure from the very first commit.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Node](https://img.shields.io/badge/node-%3E%3D18-339933)
+![Shell](https://img.shields.io/badge/script-bash-1f425f.svg)
+![Lint](https://img.shields.io/badge/lint-eslint%20%2B%20prettier-yellow)
+
+---
 
 ## Motivation
 
-In a collaborative web environment, the flexibility of JavaScript often leads to inconsistency. Decisions about semicolon usage, indentation size, or folder structure can consume valuable time better spent on business logic.
+In collaborative environments, JavaScript's flexibility often leads to inconsistency.
+Decisions about semicolons, indentation, or folder structure consume valuable time that should be spent on real features.
 
-This repository provides a rigid baseline to:
-1.  **Enforce Consistency:** Everyone uses the same formatting and linting rules automatically.
-2.  **Reduce Friction:** New developers can onboard without configuring their editors manually.
-3.  **Prevent Bad Commits:** Git hooks block unformatted or erroneous code before it reaches the repository.
+Web Baseline provides a rigid foundation to:
+
+1. **Enforce Consistency:** Formatting and linting rules are automatically applied.
+2. **Reduce Friction:** New developers onboard without editor setup.
+3. **Prevent Bad Commits:** Git hooks block unformatted or erroneous code.
+
+---
 
 ## Features
 
 Running the setup script provides:
 
-* **Structured Architecture:** Creates a scalable directory layout (`src/modules`, `services`, `utils`, `public`).
-* **Code Quality:** Installs and configures **ESLint** and **Prettier** with industry-standard rules.
-* **Git Hooks:** Sets up **Husky** and **lint-staged** to ensure code quality on commit.
-* **Editor Configuration:** Generates a `.vscode/settings.json` file to enforce "Format on Save" for all contributors.
-* **Modern Stack:** Enforces **PNPM** and ES Modules (`type: "module"`).
+- **Structured Architecture:** Creates a scalable folder layout (`src/modules`, `services`, `utils`, `public`).
+- **Code Quality:** Installs & configures **ESLint** and **Prettier** with industry-standard rules.
+- **Git Hooks:** Sets up **Husky** + **lint-staged** for automatic code validation.
+- **Editor Configuration:** Generates `.vscode/settings.json` to enforce “Format on Save”.
+- **Modern Stack:** Enforces **PNPM**, ES Modules (`type: "module"`), and opinionated defaults.
+
+---
 
 ## Prerequisites
 
-* **Node.js**: v18 or higher
-* **PNPM**: Required for package management
-* **Bash**: MacOS, Linux, or WSL (Windows Subsystem for Linux)
+- **Node.js:** 18+
+- **PNPM:** Required
+- **Bash:** macOS, Linux, or WSL
 
-## Quick Start
+---
 
-1.  Download the script to your project root:
-    ```bash
-    curl -O [https://raw.githubusercontent.com/YOUR_USERNAME/web-baseline/main/setup.sh](https://raw.githubusercontent.com/YOUR_USERNAME/web-baseline/main/setup.sh)
-    ```
-    *(Or clone the repository and copy the file manually)*
+## Quick Start (Per Project)
 
-2.  Make the script executable:
-    ```bash
-    chmod +x setup.sh
-    ```
+Download the script into your project:
 
-3.  Run the initialization:
-    ```bash
-    ./setup.sh
-    ```
-
-## Generated Project Structure
-
-The script initializes the following structure:
-
-```text
-.
-├── .husky/                 # Pre-commit hooks
-├── .vscode/
-│   └── settings.json       # Shared VS Code settings
-├── public/
-│   ├── assets/
-│   ├── icons/
-│   ├── images/
-│   ├── js/
-│   └── styles/
-├── src/
-│   ├── modules/            # Domain-specific modules
-│   ├── services/           # External services/APIs
-│   └── utils/              # Shared utilities
-├── .editorconfig           # Universal editor configuration
-├── .eslintrc.cjs           # ESLint configuration
-├── .lintstagedrc.json      # Lint-staged configuration
-├── .prettierrc.json        # Prettier configuration
-├── package.json
-└── pnpm-lock.yaml
+```bash
+curl -O [https://raw.githubusercontent.com/muratalpaslan/web-baseline/main/web-baseline.sh](https://raw.githubusercontent.com/muratalpaslan/web-baseline/main/web-baseline.sh)
